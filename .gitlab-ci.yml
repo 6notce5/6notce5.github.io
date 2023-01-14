@@ -1,0 +1,11 @@
+pages: -- crating job of pages
+stage: deploy -- Deploy stage of gitlab pages
+script: -- Start script section
+- mkdir .public -- Create public directory
+- cp -r * .public -- Copy public directory.
+- mv .public public -- move public directory.
+artifacts: -- Start of artifact section
+paths: -- Parameter of artifact section.
+- public -- Parameter of artifact section
+only:
+- master
